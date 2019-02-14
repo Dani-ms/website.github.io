@@ -1,0 +1,387 @@
+body{
+    margin:0 auto;
+    font-family: 'Roboto','Tahoma';
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    line-height: 30px;
+    color:#888;
+    
+}
+.left{
+float: left;
+}
+p{
+  color:#444;
+  text-align: justify;
+}
+.title{
+  margin: 10px;
+  font-size: 24px;
+  font-weight: 300;
+}
+hr{
+  display: block;
+  height: 2px;
+  border: 0;
+  border-top: 2px solid #008577;
+  margin: 10px 0px;
+  padding: 0;
+  width: 30%;
+}  
+a{
+    text-decoration: none;
+    color:inherit;
+}
+.btn{
+  background-color:#008577;
+  color:#fff;
+  width: 120px;
+  margin:5px;
+}
+.one{
+    /*background-color:#6b7a8f;*/
+    height:720px;
+    width: 100%;
+}
+#two{
+  height:100%;
+  width: 100%;
+  margin:20px;
+}
+.item1{
+  background-image: url('../img/ashwini-chaudhary-1295249-unsplash.jpg');
+  background-position: bottom;
+  background-position-y: bottom;
+  height: 100vh;
+  width:100%;
+}
+.typewriter{
+  overflow: hidden;
+  color:#fff;
+  top:50%;
+  left:35%;
+  white-space: nowrap;
+  position:absolute;
+  letter-spacing: .15em;
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .1s step-end infinite;
+}
+@keyframes typing{
+  from{width: 0}
+  to{width:100%}
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+.item2{
+  background-color: #90A4AE;
+  height: 350px;
+  width:100%;
+  
+}
+
+.item4{
+  background-color:#FFF;
+  height:500px;
+  width: 100%;
+}
+.svg-container{
+  position:absolute;
+  bottom:-18px;
+  width: 100%;
+  left:0;
+  overflow: hidden;
+}
+.svg-container svg{
+  fill:#fff;
+
+}
+/*header menu*/
+.burger {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 45px;
+  height: 30px;
+  transition: .3s ease-in-out;
+  z-index: 100;
+}
+
+.burger span{
+  position: absolute;
+  height: 4px;
+  border-radius: 3px;
+  width: 100%;
+  background: #fff;
+  top: 0;
+  transition: transform .2s ease-in-out, opacity .2s ease-in-out;
+}
+
+.burger span:nth-child(1){
+  top: 0;
+}
+.burger span:nth-child(2),
+.burger span:nth-child(3){
+  top: 13px;
+}
+.burger span:nth-child(4){
+  top: 26px;
+}
+
+
+.burger.active span{
+  background: #fff;
+}
+.burger.active span:nth-child(1),
+.burger.active span:nth-child(4){
+  opacity: 0;
+}
+
+.burger.active span:nth-child(2){
+  transform: rotate(45deg);
+}
+
+.burger.active span:nth-child(3){
+  transform: rotate(-45deg);
+}
+
+/* Navigation */
+
+.overlay{
+  position: fixed;
+  background: #444;;
+  top: 0;
+  left: 0;
+  margin:0;
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity .3s, visibility .3s, height .3s;
+  z-index: 99;
+}
+
+nav {
+  text-align: center;
+  cursor: pointer;
+  color:#FFFF;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul li{
+  opacity: 0;
+  margin: 1rem 0;
+}
+nav ul li a{
+  color: #fff;
+  text-decoration: none;
+  transition: opacity .2s ease;
+  opacity: .75;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+/* Animation */
+@keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		transform: translate3d(-25%, 0, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+
+.overlay.visible{
+  opacity: .85;
+  visibility: visible;
+  height: 100%;
+  margin: 0;
+  top:0;
+}
+.overlay.visible li {
+		animation: fadeInLeft .3s ease forwards;
+	}
+.overlay.visible li:nth-of-type(1){
+  animation-delay: .23s;
+}
+.overlay.visible li:nth-of-type(2){
+  animation-delay: .26s;
+}
+.overlay.visible li:nth-of-type(3){
+  animation-delay: .29s;
+}
+.overlay.visible li:nth-of-type(4){
+  animation-delay: .32s;
+}
+.overlay.visible li:nth-of-type(5){
+  animation-delay: .35s;
+}
+/*end of header menu*/
+
+/*about */
+
+.about button i{
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  margin-left: 3px;
+}
+.about button:hover i{
+  -webkit-transform: translateX(5px);
+  -ms-transform: translateX(5px);
+  -o-transform: translateX(5px);
+  transform: translateX(5px);
+}
+.imgabout img{
+  height:530px;
+  margin:25px 155px 25px;
+  text-align: center;
+}
+/*about */
+
+.icons{
+  padding:15px 15px 10px;
+  text-align: left;
+  cursor: pointer;
+ 
+  
+}
+.icons img{
+  width: 10%;
+  margin-right: 10px;
+  float: left;
+}
+.single-service-container{
+  width: 50px;
+  margin-left: 50%;
+}
+.single-service{
+  /*padding:14px;*/
+  z-index: 1;
+  width: 480px;
+  margin: 15px;
+  margin-left: 15%;
+}
+.single-service img{
+  margin-left: 25%;
+}
+
+/*clients */
+.item3{
+  background-color: #efefef;
+  height:450px;
+  width:100%;
+
+}
+.container-clients{
+  padding:20px 30px;
+  height:450px;
+  width:100%;
+}
+.icons-clients img{
+ width: 50%;
+
+}
+#carouselExampleSlidesOnly{
+  height: 450px;
+}
+.carousel{
+  height: 450px;
+  width: 50%;
+}
+/*end of clients*/
+/*Contact*/
+#contact{
+  width: 100%;
+  margin-top:20px;
+  position: relative;
+
+}
+#formcontact{
+  display: block;
+  margin-top: 0em;
+  text-align: left;
+  height: 420px;
+  margin:25px 70px 25px;
+}
+#formcontact input{
+  border: none;
+  outline: none;
+  background: none;
+  display: block;
+  border-bottom: 1px solid #dddddd;
+  padding-bottom:15px;
+  margin-top: 10px;
+  width: 55%;
+}
+#formcontact button i{
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  margin-left: 8px;
+}
+#formcontact button:hover i{
+  -webkit-transform: translateX(5px);
+  -ms-transform: translateX(5px);
+  -o-transform: translateX(5px);
+  transform: translateX(5px);
+}
+textarea{
+  border: 1px solid #373737;
+  outline: none;
+  margin-top: 15px;
+  letter-spacing: 0;
+}
+.alert{
+  display: none;
+}
+/* end of contact*/
+#footer{
+  background-color:#373737;
+  color:#fff;
+  height:60px;
+  padding:5px;
+}
+#footer p{
+  color:#fff;
+  padding: 5px 5px;
+}
+.socialmedia{
+  padding:15px 10px 10px 10px;
+  cursor: pointer;
+}
+.socialmedia span{
+  line-height: 3px;
+  cursor: pointer;
+}
+.go-to-top a{
+  color:#373737;
+  background-color:#008577;
+  position:absolute;
+  width: 50px;
+  height: 50px;
+  left:90%;
+  padding:10px 15px;
+  z-index: 99;
+   
+}
+@media only screen and (max-width: 737px) {
+  .imgabout img{
+    margin-left:15px;
+    text-align: center;
+  }
+  .about{
+    margin-left:15px;
+  }
+
+
+}
